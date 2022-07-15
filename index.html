@@ -7,7 +7,41 @@
     <title>Donut Clicker</title>
   </head>
   <body>
+    <div class="container">
+      <header>
+        <nav>
+          <li>Fred the Baker Baking Company</li>
+          <li>Donut Clicker</li>
+          <li>Conatacts</li>
+        </nav>
+      </header>
+      <main>
+
+        <section id="donutMaker">
+          <!-- <button id="donutMakerBtn">make-donuts</button> -->
+          <img id="donutMakerBtn" src="donut-img.png" alt-="" />
+          <h2>donut count <span id="donutCountDisplay">0</span></h2>
+        </section>
+
+        <section id="autoClicker">
+          <button id="autoClickerBtn">Buy Auto Clicker</button>
+          <div id="autoStatus">
+            <h2>Active Auto Clicker count <span id="autoCountDisplay">0</span></h2>
+
+            <div id="autoClicker">
+              <h3>auto-Clicker Price <span id="autoCost">100</span></h3>
+            </div>
+          </div>
+        </section>
+
+        <section id="clickMultiplier">
+          <button id="multiplierBtn">multiply your Clicker</button>
+          <h4>clickMultiplierCost <span id="clickMultiplierCost">10</span></h4>
+        </section>
+
+
+      </main>
     <div class="container"></div>
-    <script src="./index.js"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
