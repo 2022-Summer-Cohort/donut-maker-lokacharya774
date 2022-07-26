@@ -7,22 +7,6 @@ class DonutMaker {
     this.clickMultiplierPrice = 10;
   }
 
-  clickDonuts() {
-    this.donutClicker++;
-  }
-  addNewClicker() {
-    this.autoClicker++;
-    this.donutClicker -= this.autoClickerPrice;
-    this.autoClickerPrice *= 1.2;
-    this.autoClickerPrice = Math.floor(this.autoClickerPrice);
-  }
-  addNewMultiplier() {
-    this.donutMultiplier++;
-    this.donutCount -= this.donutMultiplierPrice;
-    this.clickMultiplierPrice *= 1.1;
-    this.clickMultiplierPrice = Math.floor(this.clickMultiplierPrice);
-  }
-
   getDonutClicker() {
     return this.donutClicker;
   }
@@ -41,5 +25,30 @@ class DonutMaker {
   getautoClickerPrice() {
     return this.donutClickerPrice;
   }
+
+  clickDonuts() {
+    this.donutClicker += Math.pow(1.2, this.clickMultiplier)
+  }
+  addNewClicker() {
+    if (this.donutClicker >= this.autoClickerPrice ) {
+      this.autoClicker++;
+      this.donutClicker -= this.autoClickerPrice;
+      this.autoClickerPrice *= 1.2;
+      this.autoClickerPrice = Math.round(this.autoClickerPrice);
+    }
+  }
+  addNewMultiplier() {
+    if (this.donutClicker >= this.clickMultiplierPrice){
+      this.clickMultiplier++;
+      this.donutClicker -= this.clickMultiplierPrice
+      this.clickMultiplierPrice *= 1.1;
+      this.clickMultiplierPrice = Math.round(this.clickMultiplierPrice);
+    }
+  }
+
+
+
+
 }
+
 export default DonutMaker;

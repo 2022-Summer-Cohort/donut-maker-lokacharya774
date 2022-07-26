@@ -5,28 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donut Clicker</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <header>
-        <nav>
-          <li>Fred the Baker Baking Company</li>
-          <li>Donut Clicker</li>
-          <li>Conatacts</li>
-        </nav>
-      </header>
+        <header>
+          <nav class="navigationBar">
+            <div class="dropdown">
+              <span class="company">Fred the Baking Company</span>
+              <div class="dropdown-content-company">
+                <p>This game use a click button to create virtual donuts <br>
+                   and with the donut made players can buy the functions <br>
+                   like auto clicker, and donut multiplier. With the help of <br>
+                   auto clicker players can enjoy the auto made donuts.
+                </p>
+              </div>
+            </div>
+            <div class="dropdown">
+              <span class="inspiration"><a href="https://orteil.dashnet.org/cookieclicker/" target="blank">Cookie
+                  Clicker</a></span>
+              <div class="dropdown-content-inspiration">
+                <p>The game was inspired by the game called cookie clicker</p>
+              </div>
+            </div>
+            <div class="dropdown">
+              <span class="contacts">Contacts</span>
+              <div class="dropdown-content-contacts">
+                <li><a href="https://https://github.com/lokacharya774" target="blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https:www.linkedin.com/in/lokacharya/" target="blank"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li><a href="https://lokacharya774.github.io/" target="blank"><i class="fa fa-user-circle"></i></a></li>
+              </div>
+            </div>
+          </nav>
+        </header>
       <main>
 
         <section id="donutMaker">
           <!-- <button id="donutMakerBtn">make-donuts</button> -->
-          <img id="donutMakerBtn" src="donut-img.png" alt-="" />
+          <img id="donutMakerBtn" src="donut-img.png" height="400" style="transform: rotate(90deg);"/>
           <h2>donut count <span id="donutCountDisplay">0</span></h2>
         </section>
 
         <section id="autoClicker">
           <button id="autoClickerBtn">Buy Auto Clicker</button>
           <div id="autoStatus">
-            <h2>Active Auto Clicker count <span id="autoCountDisplay">0</span></h2>
+            <h2>active auto Clicker <span id="autoCountDisplay">0</span></h2>
 
             <div id="autoClicker">
               <h3>auto-Clicker Price <span id="autoCost">100</span></h3>
@@ -37,6 +62,7 @@
         <section id="clickMultiplier">
           <button id="multiplierBtn">multiply your Clicker</button>
           <h4>clickMultiplierCost <span id="clickMultiplierCost">10</span></h4>
+          <h3>multiplier <span id="multiplierCountDisplay">0</span></h3>
         </section>
 
 
